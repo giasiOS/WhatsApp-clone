@@ -51,7 +51,7 @@
 		412D3BA52D8B1171000F0977 /* WhatsApp-clone */ = {
 			isa = PBXGroup;
 			children = (
-				412D3BA62D8B1171000F0977 /* WhatsApp_cloneApp.swift */,
+				412D3BB42D8B1564000F0977 /* App */,
 				412D3BA82D8B1171000F0977 /* ContentView.swift */,
 				412D3BAA2D8B117B000F0977 /* Assets.xcassets */,
 				412D3BAC2D8B117B000F0977 /* Preview Content */,
@@ -65,6 +65,14 @@
 				412D3BAD2D8B117B000F0977 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		412D3BB42D8B1564000F0977 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				412D3BA62D8B1171000F0977 /* WhatsApp_cloneApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
