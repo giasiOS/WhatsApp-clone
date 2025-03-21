@@ -8,11 +8,71 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    @State private var selectedTab: Tab = .updates
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Text(Tab.updates.title)
+                .tabItem {
+                    Tab.updates.tabContents
+                }
+            
+            Text(Tab.calls.title)
+                .tabItem {
+                    Tab.calls.tabContents
+                }
+            
+            Text(Tab.communities.title)
+                .tabItem {
+                    Tab.communities.tabContents
+                }
+            
+            Text(Tab.chats.title)
+                .tabItem {
+                    Tab.chats.tabContents
+                }
+            
+            Text(Tab.settings.title)
+                .tabItem {
+                    Tab.settings.tabContents
+                }
+        }
     }
 }
 
 #Preview {
     MainTabView()
+}
+
+extension MainTabView {
+    
+    private enum Tab: String {
+        case updates, calls, communities, chats, settings
+        
+        fileprivate var title: String {
+            return rawValue.capitalized
+        }
+        
+        @ViewBuilder
+        fileprivate var tabContents: some View {
+            switch self {
+            case .updates:
+                Image(systemName: "circle.dashed.inset.filled")
+                Text(title)
+            case .calls:
+                Image(systemName: "phone")
+                Text(title)
+            case .communities:
+                Image(systemName: "person.3")
+                Text(title)
+            case .chats:
+                Image(systemName: "message")
+                Text(title)
+            case .settings:
+                Image(systemName: "gear")
+                Text(title)
+            }
+        }
+    }
 }
