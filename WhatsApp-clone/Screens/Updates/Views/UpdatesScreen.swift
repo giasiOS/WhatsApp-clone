@@ -9,10 +9,33 @@ import SwiftUI
 
 struct UpdatesScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            
+            List {
+                
+            }
+            .searchable(text: .constant(""))
+            .navigationTitle("Updates")
+            .toolbar {
+                trailingNavItem
+            }
+        }
     }
 }
 
 #Preview {
     UpdatesScreen()
+}
+
+extension UpdatesScreen {
+    @ToolbarContentBuilder
+    private var trailingNavItem: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            Button {
+                
+            } label: {
+                Image(systemName: "ellipsis.circle")
+            }
+        }
+    }
 }
