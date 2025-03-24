@@ -13,7 +13,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            Text(Tab.updates.title)
+            UpdatesScreen()
                 .tabItem {
                     Tab.updates.tabContents
                 }
