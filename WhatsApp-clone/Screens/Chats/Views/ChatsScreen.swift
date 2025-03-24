@@ -67,10 +67,18 @@ extension ChatsScreen {
         }
         
         ToolbarItem(placement: .topBarLeading) {
-            Button {
-                
+            Menu {
+                Button {
+                    
+                } label: {
+                    Label("Select Chats", systemImage: "checkmark.circle")
+                }
             } label: {
-                Image(systemName: "ellipsis.circle")
+                Button {
+                    
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                }
             }
         }
     }

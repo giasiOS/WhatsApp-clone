@@ -28,7 +28,7 @@ struct MainTabView: View {
                     Tab.communities.tabContents
                 }
             
-            Text(Tab.chats.title)
+           ChatsScreen()
                 .tabItem {
                     Tab.chats.tabContents
                 }
