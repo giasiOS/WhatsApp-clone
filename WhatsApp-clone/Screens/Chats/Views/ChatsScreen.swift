@@ -13,8 +13,8 @@ struct ChatsScreen: View {
             List {
                 ArchivedCellView()
                 
-                ForEach(0..<3) { item in
-                    
+                ForEach(0..<2) { item in
+                    ChatListCellView()
                 }
             }
             .listStyle(.plain)
