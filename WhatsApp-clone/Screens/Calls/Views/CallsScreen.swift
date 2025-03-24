@@ -15,6 +15,17 @@ struct CallsScreen: View {
         NavigationStack {
             List {
                 CreateCallLinkSection()
+                
+                Section {
+                    ForEach(0..<12) { item in
+                        CallsListCellView()
+                    }
+                } header: {
+                    Text("Recent".capitalized)
+                        .font(.headline)
+                        .textCase(nil)
+                        .foregroundColor(.primary)
+                }
             }
             .navigationTitle("Calls")
             .searchable(text: .constant(""))
@@ -73,6 +84,7 @@ extension CallsScreen {
             rawValue
         }
     }
+    
     private struct CreateCallLinkSection: View {
         var body: some View {
             HStack(alignment: .top) {
