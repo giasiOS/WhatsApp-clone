@@ -16,6 +16,8 @@ struct ChatsScreen: View {
                 ForEach(0..<2) { item in
                     ChatListCellView()
                 }
+                inboxFooterView
+                    .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
             .searchable(text: .constant(""))
@@ -85,5 +87,24 @@ extension ChatsScreen {
             .foregroundStyle(.gray)
             .padding(12)
         }
+    }
+    
+    private var inboxFooterView: some View {
+        HStack {
+         Image(systemName: "lock.fill")
+            
+            Text("Your personal messages are")
+               
+            Button("end-to-end encrypted") {
+                
+            }
+            .buttonStyle(.plain)
+            .fontWeight(.semibold)
+            .foregroundStyle(.blue)
+            .padding(.leading, -2)
+        }
+        .foregroundStyle(.gray)
+        .font(.caption2)
+        .padding(.horizontal)
     }
 }
