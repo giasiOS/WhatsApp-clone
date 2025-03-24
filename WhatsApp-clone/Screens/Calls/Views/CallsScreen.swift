@@ -14,7 +14,7 @@ struct CallsScreen: View {
     var body: some View {
         NavigationStack {
             List {
-                
+                CreateCallLinkSection()
             }
             .navigationTitle("Calls")
             .searchable(text: .constant(""))
@@ -71,6 +71,32 @@ extension CallsScreen {
         
         var id: String {
             rawValue
+        }
+    }
+    private struct CreateCallLinkSection: View {
+        var body: some View {
+            HStack(alignment: .top) {
+                // button
+                Button {
+                    
+                } label: {
+                    Image(systemName: "link.circle.fill")
+                        .foregroundStyle(.blue, Color(.systemGroupedBackground))
+                        .font(.largeTitle)
+                }
+                .buttonStyle(.plain)
+                // textes
+                VStack(alignment: .leading) {
+                    
+                    Text("Create Call Link")
+                        .fontWeight(.medium)
+                        .foregroundStyle(.blue)
+                    
+                    Text("Share a link for your WhatsApp call")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                }
+            }
         }
     }
 }
