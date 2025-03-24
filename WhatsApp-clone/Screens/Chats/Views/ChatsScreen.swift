@@ -11,8 +11,13 @@ struct ChatsScreen: View {
     var body: some View {
         NavigationStack {
             List {
+                ArchivedCellView()
                 
+                ForEach(0..<3) { item in
+                    
+                }
             }
+            .listStyle(.plain)
             .searchable(text: .constant(""))
             .navigationTitle("Chats")
             .toolbar {
@@ -65,6 +70,20 @@ extension ChatsScreen {
             } label: {
                 Image(systemName: "ellipsis.circle")
             }
+        }
+    }
+    
+    private struct ArchivedCellView: View {
+        var body: some View {
+            HStack {
+                Image(systemName: "archivebox.fill")
+                    .imageScale(.large)
+                
+                Text("Archived")
+                    .fontWeight(.medium)
+            }
+            .foregroundStyle(.gray)
+            .padding(12)
         }
     }
 }
