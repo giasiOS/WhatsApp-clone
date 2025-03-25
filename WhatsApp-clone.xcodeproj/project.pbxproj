@@ -15,6 +15,7 @@
 		412D3BAB2D8B117B000F0977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412D3BAA2D8B117B000F0977 /* Assets.xcassets */; };
 		412D3BAE2D8B117B000F0977 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412D3BAD2D8B117B000F0977 /* Preview Assets.xcassets */; };
 		412D3BB82D8B16E0000F0977 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412D3BB72D8B16E0000F0977 /* MainTabView.swift */; };
+		41BF28D42D928B670088B8C4 /* SettingsListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BF28D32D928B670088B8C4 /* SettingsListCellView.swift */; };
 		41F6BC742D919E8A00D0AFE0 /* ChatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F6BC732D919E8A00D0AFE0 /* ChatsScreen.swift */; };
 		41F6BC762D91A96900D0AFE0 /* ChatListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F6BC752D91A96900D0AFE0 /* ChatListCellView.swift */; };
 		41F6BC7A2D91B8A600D0AFE0 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F6BC792D91B8A600D0AFE0 /* SettingsScreen.swift */; };
@@ -30,6 +31,7 @@
 		412D3BAA2D8B117B000F0977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412D3BAD2D8B117B000F0977 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		412D3BB72D8B16E0000F0977 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		41BF28D32D928B670088B8C4 /* SettingsListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCellView.swift; sourceTree = "<group>"; };
 		41F6BC732D919E8A00D0AFE0 /* ChatsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsScreen.swift; sourceTree = "<group>"; };
 		41F6BC752D91A96900D0AFE0 /* ChatListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCellView.swift; sourceTree = "<group>"; };
 		41F6BC792D91B8A600D0AFE0 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				41F6BC792D91B8A600D0AFE0 /* SettingsScreen.swift */,
+				41BF28D32D928B670088B8C4 /* SettingsListCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				412925F72D8D347300C95B8A /* UpdatesScreen.swift in Sources */,
 				412D3BB82D8B16E0000F0977 /* MainTabView.swift in Sources */,
 				411A54F82D916D5700F65380 /* CallsScreen.swift in Sources */,
+				41BF28D42D928B670088B8C4 /* SettingsListCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
