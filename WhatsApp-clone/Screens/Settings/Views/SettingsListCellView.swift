@@ -9,10 +9,25 @@ import SwiftUI
 
 struct SettingsListCellView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "at")
+                .padding(4)
+                .foregroundStyle(.white)
+                .background(.blue)
+                .clipShape(.rect(cornerRadius: 4))
+            
+            Text("Settings cell")
+                .font(.headline)
+                .fontWeight(.medium)
+        }
+        .frame(maxWidth: .infinity,alignment: .leading)
     }
 }
 
 #Preview {
-    SettingsListCellView()
+    List {
+        ForEach(0..<3) { _ in
+            SettingsListCellView()
+        }
+    }
 }
