@@ -33,7 +33,7 @@ struct MainTabView: View {
                     Tab.chats.tabContents
                 }
             
-            Text(Tab.settings.title)
+            SettingsScreen()
                 .tabItem {
                     Tab.settings.tabContents
                 }
