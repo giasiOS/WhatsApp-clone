@@ -8,15 +8,30 @@
 import SwiftUI
 
 struct SettingsListCellView: View {
+    
+    let item: SettingsItem
+    
     var body: some View {
         HStack {
-            Image(systemName: "at")
-                .padding(4)
-                .foregroundStyle(.white)
-                .background(.blue)
-                .clipShape(.rect(cornerRadius: 4))
-            
-            Text("Settings cell")
+            Group {
+                switch item.imageType {
+                case .systemImage:
+                    Image(systemName: item.imageName)
+                case .assetImage:
+                    Image(item.imageName)
+                        .resizable()
+                        .renderingMode(.template)
+                        .scaledToFit()
+                        .foregroundStyle(.white)
+                }
+            }
+            .padding(4)
+            .foregroundStyle(.white)
+            .frame(width: 28, height: 28)
+            .background(item.backgroundColor)
+            .clipShape(.rect(cornerRadius: 4))
+                      
+            Text(item.title)
                 .font(.headline)
                 .fontWeight(.medium)
         }
@@ -26,8 +41,8 @@ struct SettingsListCellView: View {
 
 #Preview {
     List {
-        ForEach(0..<3) { _ in
-            SettingsListCellView()
+        ForEach(0..<1) { _ in
+            SettingsListCellView(item: .chats)
         }
     }
 }
